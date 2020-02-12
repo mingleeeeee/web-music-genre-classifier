@@ -1,0 +1,34 @@
+<!doctype html> 
+    <head>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}"/>
+    </head>
+    
+    <body>
+      <div class="wrapper">
+        <div class="container">
+          <h1>Music Genre Classification</h1>
+          <div class="upload-container">
+            <div class="border-container">
+              <div class="icons fa-4x">
+                <i class="fas fa-file-image" data-fa-transform="shrink-3 down-2 left-6 rotate--45"></i>
+                <i class="fas fa-file-alt" data-fa-transform="shrink-2 up-4"></i>
+                <i class="fas fa-file-pdf" data-fa-transform="shrink-3 down-2 right-6 rotate-45"></i>
+              </div>
+              <audio controls>
+                <source src="{{ url_for('static', filename=song) }}" type="audio/wav">
+                <source src="{{ url_for('static', filename=song) }}" type="audio/mp3">
+                Not supported
+            </audio>
+              <p>{{result1}}</p>
+              <p>{{result2}}</p>
+              <br/>
+              <form>
+                <input type="button" value="Go back!" onclick="history.back()">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  </body>
+   
